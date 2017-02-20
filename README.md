@@ -10,6 +10,6 @@ Add more functionalities and music services if you have the time!
 
 Focus on:
 - Integrating succesfully multiple music services, such as Spotify
-- Implement easy to use controls for users with basic functionalities
+- Implementing ways to easily control the music
 - Making the system secure
 - Good documentation for users who want to setup similar system

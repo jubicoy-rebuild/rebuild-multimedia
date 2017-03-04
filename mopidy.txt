@@ -1,0 +1,22 @@
+Install mopidy with 
+wget -q -O - https://apt.mopidy.com/mopidy.gpg | sudo apt-key add -
+sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/jessie.list
+sudo apt-get update
+sudo apt-get install mopidy
+
+We installed Gmusic and Youtube extensions with
+sudo pip install mopidy-gmusic mopidy-youtube
+sudo pip --upgrade install pyasn1
+
+For gmusic you need a username and password in ~/.config/mopidy/mopidy.conf:
+[gmusic]
+username = un
+password = pw
+
+To bind to all interfaces you have to edit the bind address to 0.0.0.0 in the
+mopidy.conf
+
+For a frontend we installed moped with
+sudo pip install Mopidy-Moped
+
+Run mopidy with "mopidy" and you can access the UI from http://192.168.0.22:6680/moped/

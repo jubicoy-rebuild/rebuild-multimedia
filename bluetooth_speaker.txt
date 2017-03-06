@@ -1,0 +1,7 @@
+sudo apt-get update && sudo apt-get install -y bluez-tools pulseaudio-module-bluetooth unzip wget #install pulseaudio bluetooth module
+bt-adapter -d #used to find correct device MAC
+bt-device --set 78:44:05:5B:A9:A7 Trusted 1 #set device trusted (autoconnect)
+{ sleep 1; echo "connect 78:44:05:5B:A9:A7"; sleep 10; } | bluetoothctl #connect device untill succesfull
+
+
+pactl list short sinks #check sound sink
